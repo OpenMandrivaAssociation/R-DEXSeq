@@ -1,10 +1,10 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  DEXSeq
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
 Version:          1.0.2
-Release:          1
+Release:          2
 Summary:          Inference of differential exon usage in RNA-Seq
 Group:            Sciences/Mathematics
 License:          GPL (>= 3)
