@@ -4,7 +4,7 @@
 
 Name:             R-%{packname}
 Version:          1.0.2
-Release:          2
+Release:          3
 Summary:          Inference of differential exon usage in RNA-Seq
 Group:            Sciences/Mathematics
 License:          GPL (>= 3)
