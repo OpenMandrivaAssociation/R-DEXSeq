@@ -1,17 +1,20 @@
-%bcond_with bootstrap
+%bcond_without bootstrap
 %global packname  DEXSeq
 %global rlibdir  %{_libdir}/R/library
 
+%define debug_package %{nil}
+
 Name:             R-%{packname}
-Version:          1.0.2
-Release:          3
+Version:          1.4.0
+Release:          1
 Summary:          Inference of differential exon usage in RNA-Seq
 Group:            Sciences/Mathematics
 License:          GPL (>= 3)
 URL:              http://bioconductor.org/packages/release/bioc/html/%{packname}.html
-Source0:          http://bioconductor.org/packages/release/bioc/src/contrib/%{packname}_%{version}.tar.gz
+Source0:          http://bioconductor.org/packages/release/bioc/src/contrib/DEXSeq_1.4.0.tar.gz
 Requires:         R-Biobase 
 Requires:         R-hwriter R-methods R-stringr R-statmod 
+Requires:         R-biomaRt
 %if %{without bootstrap}
 Requires:         R-pasilla 
 %endif
@@ -20,6 +23,7 @@ BuildRequires:    R-hwriter R-methods R-stringr R-statmod
 %if %{without bootstrap}
 BuildRequires:    R-pasilla 
 %endif
+BuildRequires:    R-biomaRt
 
 %description
 The package is focused on finding differential exon usage using RNA-seq
@@ -52,9 +56,23 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %doc %{rlibdir}/%{packname}/html
 %doc %{rlibdir}/%{packname}/DESCRIPTION
 %doc %{rlibdir}/%{packname}/NEWS
+%{rlibdir}/%{packname}/CITATION
 %{rlibdir}/%{packname}/INDEX
 %{rlibdir}/%{packname}/NAMESPACE
 %{rlibdir}/%{packname}/Meta
 %{rlibdir}/%{packname}/R
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/python_scripts
+
+
+%changelog
+* Wed Feb 22 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0.2-2
++ Revision: 778840
+- Rebuild with proper dependencies
+
+* Sat Feb 18 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0.2-1
++ Revision: 776786
+- Import R-DEXSeq
+- Import R-DEXSeq
+
+
