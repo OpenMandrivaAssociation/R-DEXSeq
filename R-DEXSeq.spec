@@ -5,13 +5,13 @@
 %define debug_package %{nil}
 
 Name:             R-%{packname}
-Version:          1.4.0
+Version:          1.6.0
 Release:          1
 Summary:          Inference of differential exon usage in RNA-Seq
 Group:            Sciences/Mathematics
 License:          GPL (>= 3)
 URL:              http://bioconductor.org/packages/release/bioc/html/%{packname}.html
-Source0:          http://bioconductor.org/packages/release/bioc/src/contrib/DEXSeq_1.4.0.tar.gz
+Source0:          http://bioconductor.org/packages/release/bioc/src/contrib/DEXSeq_1.6.0.tar.gz
 Requires:         R-Biobase 
 Requires:         R-hwriter R-methods R-stringr R-statmod 
 Requires:         R-biomaRt
@@ -74,5 +74,6 @@ rm -f %{buildroot}%{rlibdir}/R.css
 + Revision: 776786
 - Import R-DEXSeq
 - Import R-DEXSeq
+
 
 
