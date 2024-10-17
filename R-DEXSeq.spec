@@ -10,7 +10,7 @@ Release:          1
 Summary:          Inference of differential exon usage in RNA-Seq
 Group:            Sciences/Mathematics
 License:          GPL (>= 3)
-URL:              http://bioconductor.org/packages/release/bioc/html/%{packname}.html
+URL:              https://bioconductor.org/packages/release/bioc/html/%{packname}.html
 Source0:          http://bioconductor.org/packages/release/bioc/src/contrib/DEXSeq_1.6.0.tar.gz
 Requires:         R-Biobase 
 Requires:         R-hwriter R-methods R-stringr R-statmod 
